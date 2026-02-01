@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="shortcut icon" href="apple-touch-icon.png" type="image/x-icon">
     <title>For Shreshtha</title>
     <style>
-        /* Animated Background */
+       
 .heart {
     position: absolute;
     color: #e91e63;
-    opacity: 0.3; /* Make them faint so text is readable */
+    opacity: 0.3; 
     animation: float 6s linear infinite;
     bottom: -10px;
-    z-index: 0; /* Behind everything */
+    z-index: 0; 
 }
 
 @keyframes float {
@@ -22,7 +22,7 @@
 }
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #fce4ec; /* Pink background */
+            background-color: #fce4ec; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -55,7 +55,7 @@
             z-index: 2; 
         }
 
-        /* Styles for the starting image */
+       
         .gif-container img {
             width: 100%;
             max-width: 200px;
@@ -64,11 +64,11 @@
             z-index: 2;
         }
 
-        /* Styles for the video that appears later */
+      
         .gif-container video {
             width: 100%;
             max-width: 300px;
-            max-height: 300px; /* Limits height */
+            max-height: 300px; 
             object-fit: cover; 
             border-radius: 10px;
             margin-bottom: 20px;
@@ -149,13 +149,11 @@ const phrases = ["No", "Are you sure?", "Really?", "Think again!", "Last chance!
 let phraseIndex = 0;
 
 const avoidAction = () => {
-    // ... (Your existing code for sizing and moving) ...
-
-    // ADD THIS: Change the text
+    
     phraseIndex = (phraseIndex + 1) % phrases.length;
     noBtn.innerText = phrases[phraseIndex];
     
-    // ... (Rest of your movement code) ...
+     
 };
 
         noBtn.addEventListener('mouseover', avoidAction);
@@ -164,12 +162,9 @@ const avoidAction = () => {
             avoidAction();
         });
 
-        // ----------------------------------------
-        // THE UPDATED "YES" CLICK LOGIC
-        // ----------------------------------------
+        
         yesBtn.addEventListener('click', () => {
-            // Replace the entire content of the card
-            // We put the H1 (Text) first, and the Video second
+            
             card.innerHTML = `
                 <h1 style="font-size: 30px; color: #d81b60; margin-bottom: 20px;">
                     YAY!  💖
@@ -184,14 +179,14 @@ const avoidAction = () => {
             `;
         });
 yesBtn.addEventListener('click', () => {
-    // 1. Trigger Confetti
+   
     confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 }
     });
 
-    // 2. The rest of your code (Video & Text)
+    
     card.innerHTML = `
         <h1 style="font-size: 30px; color: #d81b60; margin-bottom: 20px;">
             YAY! I Lovee Youuuuu! 💖
@@ -218,7 +213,7 @@ function createHeart() {
     }, 5000);
 }
 
-setInterval(createHeart, 300); // New heart every 300ms
+setInterval(createHeart, 300); 
     </script>
     
 </body>
